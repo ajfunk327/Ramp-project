@@ -33,7 +33,7 @@ public class PositionData : MonoBehaviour
         Level2 = GameObject.FindGameObjectWithTag("Player").GetComponent<Level2>();
         Variables = GameObject.FindGameObjectWithTag("UI").GetComponent<Variables>();
 
-        StreamWriter sw = File.AppendText("C:\\Users\\User\\Documents\\VRData\\PositionData" + Variables.participant + ".csv");
+        StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\PositionData" + Variables.participant + ".csv");
         sw.WriteLine("RotationX" + "," + "RotationY" + "," + "RotationZ" + "," + "PositionX" + "," + "PositionY" + "," + "PositionZ" + "," + "Frame" + "," + "TimeFromStart" + "," + "TimeInTrial" + "," + "Block" + "," + "Trial" + "," + "Scene" + "," + "Condition" + "," + "IsTrial" + "," + "IsWait");
         sw.Close();
 
@@ -73,7 +73,7 @@ public class PositionData : MonoBehaviour
 
             if (Level2.Block >= 2)
             {
-                StreamWriter sw = File.AppendText("C:\\Users\\User\\Documents\\VRData\\PositionData" + Variables.participant + ".csv");// This is where the data will be written
+                StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\PositionData" + Variables.participant + ".csv");// This is where the data will be written
             sw.WriteLine(rotationX + "," + rotationY + "," + rotationZ + "," + positionX + "," + positionY + "," + positionZ + "," + frame + "," + clock + "," + ResponseTime.levelTimer + "," + ResponseTime.trueblock + "," + trutrial + "," + ResponseTime.Trial + "," + Order.Condition + "," + Istrial + "," + IsWait);
                 sw.Close();
             }

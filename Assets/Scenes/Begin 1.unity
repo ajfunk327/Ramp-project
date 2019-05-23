@@ -492,9 +492,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'When you are ready to start the next trial press the left thumbstick.
-
-'
+  m_Text: 
 --- !u!222 &310487078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -832,10 +830,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Please listen to the experimenters instructions.
-
-
-    Press the left thumbstick after you have been instructed to begin.'
+  m_Text: 
 --- !u!222 &559772421
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1140,11 +1135,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '
-
-
-
-    +'
+  m_Text: 
 --- !u!222 &734665140
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1366,8 +1357,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Please listen to the experimenters instructions.\nIf you need a moment
-    to rest you may take a break now. \n"
+  m_Text: '
+
+'
 --- !u!222 &1156782714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1442,7 +1434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Please listen to the experimenters instructions.
+  m_Text: '
 
 '
 --- !u!222 &1196862952
