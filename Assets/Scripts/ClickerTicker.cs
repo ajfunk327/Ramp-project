@@ -11,14 +11,16 @@ public class ClickerTicker : MonoBehaviour {
     public float clock;
     public int frame = 0;
     public int Error = 1;
+    public string folder = "C:\\Users\\PACLab\\Documents\\VRData\\RampData\\";
+
     //public int ErrorCount = 0;
 
-    
-    
+
+
     void Start ()
     {
         Variables = GameObject.FindGameObjectWithTag("UI").GetComponent<Variables>();
-        StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\Error_Count_Participant" + Variables.participant + ".csv"); //Edit this to change where the file is writen.
+        StreamWriter sw = File.AppendText(folder + "Error_Count_Participant" + Variables.participant + ".csv"); //Edit this to change where the file is writen.
         sw.WriteLine("Error" + "," + "Trial" + "," + "Scene" + "," + "Frame" + "," + "SceneClock" + "," + "Clock");//Names the headers
         sw.Close();
     }
@@ -34,7 +36,7 @@ public class ClickerTicker : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Z))
         {
             //ErrorCount = ErrorCount + Error;
-            StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampDataError_Count_Participant" + Variables.participant + ".csv");
+            StreamWriter sw = File.AppendText(folder + "Error_Count_Participant" + Variables.participant + ".csv");
             sw.WriteLine(Error + "," + Level2.Trial + "," + ResponseTime.Trial + "," + frame + "," + ResponseTime.levelTimer + "," + clock);
             sw.Close();
         }

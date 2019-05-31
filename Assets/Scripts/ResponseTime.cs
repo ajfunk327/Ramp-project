@@ -40,6 +40,8 @@ public class ResponseTime : MonoBehaviour
     public bool recording = false;
     public bool posrecording = false;
     public bool ParticipantReady;
+    public string folder = "C:\\Users\\PACLab\\Documents\\VRData\\RampData\\";
+
 
     //private bool isTiming = false;
     //private float timeTillKeyisPressed = 0;
@@ -150,7 +152,7 @@ public class ResponseTime : MonoBehaviour
                             Canvas.SetActive(visible);
                          
                                 posrecording = false;
-                                StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\ParticipantData" + Variables.participant + ".csv");// This is where the data will be written
+                                StreamWriter sw = File.AppendText(folder + "ParticipantData" + Variables.participant + ".csv");// This is where the data will be written
                                 sw.WriteLine(Variables.participant + "," + Trial + "," + trialminusprac + "," + trueblock + "," + Variables.hand + "," + Variables.arm + "," + mover.scene_name + "," + Order.Condition + "," + "Y" + "," + (levelTimer));//writes the current scene, the yes or no response, and the time since the level started to the file in the path above. 
                                 sw.Close();
                             
@@ -183,7 +185,7 @@ public class ResponseTime : MonoBehaviour
                             Canvas.SetActive(visible);
                            
                                 posrecording = false;
-                                StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\ParticipantData" + Variables.participant + ".csv"); // This is where the data will be written
+                                StreamWriter sw = File.AppendText(folder + "ParticipantData" + Variables.participant + ".csv"); // This is where the data will be written
                                 sw.WriteLine(Variables.participant + "," + Trial + "," + trialminusprac + "," + trueblock + "," + Variables.hand + "," + Variables.arm + "," + mover.scene_name + "," + Order.Condition + "," + "N" + "," + (levelTimer));//writes the current scene, the yes or no response, and the time since the level started to the file in the path above. 
                                 sw.Close();
                          
@@ -336,7 +338,7 @@ public class ResponseTime : MonoBehaviour
                 if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick))
                 {
 
-                    StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\ParticipantData" + Variables.participant + ".csv");// This is where the data will be written
+                    StreamWriter sw = File.AppendText(folder + "ParticipantData" + Variables.participant + ".csv");// This is where the data will be written
                     sw.WriteLine("PARTICIPANT" + "," + "SCENE" + "," + "TRIAL" + "," + "BLOCK" + "," + "HANDDOM" + "," + "ARMLENGTH" + "," + "CONDITION" + "," + "ORDER" + "," + "RESPONSE" + "," + "RESPONSETIME");//writes the current scene, the yes or no response, and the time since the level started to the file in the path above. 
                     sw.Close();
                     Level2.thumbstick = true;
