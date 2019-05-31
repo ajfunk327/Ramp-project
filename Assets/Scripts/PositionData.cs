@@ -71,12 +71,11 @@ public class PositionData : MonoBehaviour
 
         
 
-            if (Level2.Block >= 2)
-            {
+           
                 StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\PositionData" + Variables.participant + ".csv");// This is where the data will be written
             sw.WriteLine(rotationX + "," + rotationY + "," + rotationZ + "," + positionX + "," + positionY + "," + positionZ + "," + frame + "," + clock + "," + ResponseTime.levelTimer + "," + ResponseTime.trueblock + "," + trutrial + "," + ResponseTime.Trial + "," + Order.Condition + "," + Istrial + "," + IsWait);
                 sw.Close();
-            }
+            
            
         
 

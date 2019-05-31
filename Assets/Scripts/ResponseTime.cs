@@ -148,13 +148,12 @@ public class ResponseTime : MonoBehaviour
                             counter1 = counter1 + 1;
                             TrialNum = TrialNum + 1;
                             Canvas.SetActive(visible);
-                            if (Level2.Block > 1)
-                            {
+                         
                                 posrecording = false;
                                 StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\ParticipantData" + Variables.participant + ".csv");// This is where the data will be written
                                 sw.WriteLine(Variables.participant + "," + Trial + "," + trialminusprac + "," + trueblock + "," + Variables.hand + "," + Variables.arm + "," + mover.scene_name + "," + Order.Condition + "," + "Y" + "," + (levelTimer));//writes the current scene, the yes or no response, and the time since the level started to the file in the path above. 
                                 sw.Close();
-                            }
+                            
 
                             Debug.Log(Trial);//Confirms current scene
                             Debug.Log("No");
@@ -182,13 +181,12 @@ public class ResponseTime : MonoBehaviour
                             counter1 = counter1 + 1;
                             TrialNum = TrialNum + 1;
                             Canvas.SetActive(visible);
-                            if (Level2.Block >= 2)
-                            {
+                           
                                 posrecording = false;
                                 StreamWriter sw = File.AppendText("C:\\Users\\PACLab\\Documents\\VRData\\RampData\\ParticipantData" + Variables.participant + ".csv"); // This is where the data will be written
                                 sw.WriteLine(Variables.participant + "," + Trial + "," + trialminusprac + "," + trueblock + "," + Variables.hand + "," + Variables.arm + "," + mover.scene_name + "," + Order.Condition + "," + "N" + "," + (levelTimer));//writes the current scene, the yes or no response, and the time since the level started to the file in the path above. 
                                 sw.Close();
-                            }
+                         
 
                             Debug.Log(Trial);//Confirms current scene
                             Debug.Log("Yes");//Confirms button press in the debug log. 
